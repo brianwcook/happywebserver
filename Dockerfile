@@ -19,14 +19,14 @@ LABEL name="happywebserver" \
 ### https://github.com/projectatomic/container-best-practices/blob/master/creating/help.adoc
 COPY help.md /tmp/help.md
 
-RUN yum clean all && yum-config-manager --disable \* &> /dev/null && \
+RUN yum clean all && yum-config-manager --disable \* &> /dev/null 
 ### Add necessary Red Hat repos here
-    yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &> /dev/null && \
-    yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs && \
+    yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &> /dev/null 
+    yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
 ### Add your package needs to this installation line
-    yum -y install --setopt=tsflags=nodocs golang-github-cpuguy83-go-md2man && \
+    yum -y install --setopt=tsflags=nodocs golang-github-cpuguy83-go-md2man 
 ### help file markdown to man conversion
-    go-md2man -in /tmp/help.md -out /help.1 && yum -y remove golang-github-cpuguy83-go-md2man && \
+    go-md2man -in /tmp/help.md -out /help.1 && yum -y remove golang-github-cpuguy83-go-md2man 
 yum clean all
 
 # Update and install the application

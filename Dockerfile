@@ -28,7 +28,7 @@ RUN yum clean all && yum-config-manager --disable \* &> /dev/null
 ### Add your package needs to this installation line
   RUN  yum -y install --setopt=tsflags=nodocs golang-github-cpuguy83-go-md2man 
 ### help file markdown to man conversion
- RUN   go-md2man -in /tmp/help.md -out /help.1 && yum -y remove golang-github-cpuguy83-go-md2man 
+#  RUN   go-md2man -in /tmp/help.md -out /help.1 && yum -y remove golang-github-cpuguy83-go-md2man 
 RUN yum clean all
 
 # Update and install the application

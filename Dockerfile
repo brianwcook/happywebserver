@@ -21,8 +21,11 @@ COPY help.md /tmp/help.md
 
 RUN yum clean all && yum-config-manager --disable \* &> /dev/null 
 ### Add necessary Red Hat repos here
-    yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &> /dev/null 
-    yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
+   
+   # does not work on openshift dedicated
+   # yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &> /dev/null 
+   
+   yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
 ### Add your package needs to this installation line
     yum -y install --setopt=tsflags=nodocs golang-github-cpuguy83-go-md2man 
 ### help file markdown to man conversion

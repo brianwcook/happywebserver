@@ -24,7 +24,7 @@ RUN yum clean all && yum-config-manager --disable \* &> /dev/null
    
  RUN yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &> /dev/null 
    
-   yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
+ RUN yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
 ### Add your package needs to this installation line
   RUN  yum -y install --setopt=tsflags=nodocs golang-github-cpuguy83-go-md2man 
 ### help file markdown to man conversion

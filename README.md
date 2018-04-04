@@ -1,2 +1,3 @@
 # happywebserver
-a simple webserver for Red Hat Container Platform
+a simple webserver for Red Hat Container Platform.
+

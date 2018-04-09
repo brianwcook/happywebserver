@@ -17,7 +17,7 @@ LABEL name="happywebserver" \
 
 ### Atomic Help File - Write in Markdown, it will be converted to man format at build time.
 ### https://github.com/projectatomic/container-best-practices/blob/master/creating/help.adoc
-COPY help.md /tmp/help.md
+# COPY help.md /tmp/help.md
 
 RUN yum clean all && yum-config-manager --disable \* &> /dev/null 
 ### Add necessary Red Hat repos here

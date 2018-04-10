@@ -23,9 +23,10 @@ RUN yum clean all && yum-config-manager --disable \* &> /dev/null
 ### Add necessary Red Hat repos here
 RUN mkdir /licenses && echo "some license text" > /licenses/evil-terms
 
- RUN yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &> /dev/null 
-   
- RUN yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
+RUN yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &> /dev/null 
+
+# temporarily disabled due to yum issues in prod
+# RUN yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
 ### Add your package needs to this installation line
 
 # golang-github-cpuguy83-go-md2man  is not found for some reason... AWS repo difference?

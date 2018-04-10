@@ -43,7 +43,7 @@ RUN mkdir /licenses && echo "some license text" > /licenses/evil-terms
 #RUN yum install httpd -y
 
 RUN echo "This container image was build on:" > /foo.text
-RUN date >> /var/www/html/foobar.text
+RUN date >> /foobar.text
 EXPOSE 8080
 
 # Start the service

@@ -42,8 +42,8 @@ RUN yum clean all
 #RUN yum update -y
 RUN yum install httpd -y
 
-RUN echo "This container image was build on:" > /var/www/html/index.html
-RUN date >> /var/www/html/index.html
+RUN echo "This container image was build on:" > /foo.txt
+RUN date >> /foobar.txt
 EXPOSE 8080
 
 # Start the service

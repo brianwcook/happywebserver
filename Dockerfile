@@ -26,13 +26,13 @@ RUN mkdir /licenses && echo "some license text" > /licenses/evil-terms
 RUN yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &> /dev/null 
 
 # temporarily disabled due to yum issues in prod
-# RUN yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
+RUN yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
 ### Add your package needs to this installation line
 
 # golang-github-cpuguy83-go-md2man  is not found for some reason... AWS repo difference?
-# RUN  yum -y install --setopt=tsflags=nodocs golang-github-cpuguy83-go-md2man 
+RUN  yum -y install --setopt=tsflags=nodocs golang-github-cpuguy83-go-md2man 
 ### help file markdown to man conversion
-#  RUN   go-md2man -in /tmp/help.md -out /help.1 && yum -y remove golang-github-cpuguy83-go-md2man 
+# RUN   go-md2man -in /tmp/help.md -out /help.1 && yum -y remove golang-github-cpuguy83-go-md2man 
 
 
 RUN yum clean all

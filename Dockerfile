@@ -29,7 +29,7 @@ RUN yum-config-manager --enable rhel-7-server-rpms,rhel-7-server-optional-rpms &
 RUN yum -y update-minimal --security --sec-severity=Important --sec-severity=Critical --setopt=tsflags=nodocs
 ### Add your package needs to this installation line
 
-golang-github-cpuguy83-go-md2man  is not found for some reason... AWS repo difference?
+# golang-github-cpuguy83-go-md2man  is not found for some reason... AWS repo difference?
 RUN  yum -y install --setopt=tsflags=nodocs golang-github-cpuguy83-go-md2man 
 ### help file markdown to man conversion
 RUN   go-md2man -in /tmp/help.md -out /help.1 && yum -y remove golang-github-cpuguy83-go-md2man 

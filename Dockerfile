@@ -12,7 +12,9 @@ LABEL name="happywebserver" \
       vendor="Example Inc" \
       version="1.0" \
       release="1" \
-      run='docker run -d -p 8080:80 --name=happyweb happywebserver'
+      run='docker run -d -p 8080:80 --name=happyweb happywebserver' \
+      description='a different sample description' \
+      summary='a different sample summary label'
 
 
 ### Atomic Help File - Write in Markdown, it will be converted to man format at build time.

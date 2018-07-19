@@ -8,13 +8,13 @@ FROM registry.access.redhat.com/rhel7
 MAINTAINER <admin@example.com>
 
 ### Add Atomic/OpenShift Labels - https://github.com/projectatomic/ContainerApplicationGenericLabels#####
-LABEL name="happywebserver" \
-      vendor="Example Inc" \
+LABEL name="happywebserver1" \
+      vendor="Example Inc1" \
       version="1.0" \
       release="1" \
       run='docker run -d -p 8080:80 --name=happyweb happywebserver' \ 
-      description='a different sample description' \
-      summary='sa different sample summary label'
+      description='a different sample description1' \
+      summary='sa different sample summary label1'
 
 
 ### Atomic Help File - Write in Markdown, it will be converted to man format at build time.

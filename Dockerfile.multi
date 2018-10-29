@@ -6,7 +6,7 @@
 FROM registry.access.redhat.com/rhel7
 #FROM rhel7:latest
 COPY artifact artifact
-FROM registry.access.redhat.com/rhel7 as builder
+FROM registry.access.redhat.com/rhel7
 
 COPY --from=0 artifact artifact 
 

@@ -3,7 +3,7 @@
 # Version 1
 
 # Pull the rhel image from the local repository
-FROM registry.rhc4tp.openshift.com/ospid-d2bede1b-fa2c-4cfe-9722-8bca0271b240/partner-build-service:7-r92
+FROM 172.30.131.217:5000/ospid-636d48ce-7fcb-4766-99e5-da88c6c9f603/partner-build-service:test0004
 #FROM rhel7:latest
 MAINTAINER <admin@example.com>
 

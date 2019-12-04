@@ -3,7 +3,7 @@
 # Version 1
 
 # Pull the rhel image from the local repository
-FROM registry.access.redhat.com/rhel7
+FROM registry.redhat.io/rhel7
 #FROM rhel7:latest
 MAINTAINER <admin@example.com>
 
